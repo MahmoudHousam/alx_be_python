@@ -7,11 +7,11 @@ def detect_weather():
 
     weather_input = input("What's the weather like today? (sunny/rainy/cold): ")
     if weather_input == "sunny":
-        print(weather_dict["sunny"])
+        print("Wear a t-shirt and sunglasses.")
     elif weather_input == "rainy":
-        print(weather_dict["rainy"])
+        print("Don't forget your umbrella and a raincoat.")
     if weather_input == "cold":
-        print(weather_dict["cold"])
+        print("Make sure to wear a warm coat and a scarf.")
     else:
         print("Sorry, I don't have recommendations for this weather.")
 
