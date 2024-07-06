@@ -1,6 +1,7 @@
-def perform_operation(
-    num1: float, num2: float, operation={"add", "subtract", "multiply", "divide"}
-):
+# def perform_operation(
+#     num1: float, num2: float, operation={"add", "subtract", "multiply", "divide"}
+# ):
+def perform_operation(num1, num2, operation):
     result = None
     match operation:
         case "add":
