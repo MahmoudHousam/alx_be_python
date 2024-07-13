@@ -21,10 +21,10 @@ class test_simple_calculator_class(unittest.TestCase):
         with pytest.raises(TypeError):
             self.calc.subtract("2", 4)
 
-    def test_multiply(self):
+    def test_multiplication(self):
         self.assertEqual(self.calc.multiply(4, 9), 36)
 
-    def test_divide(self):
+    def test_division(self):
         self.assertEqual(self.calc.divide(36, 9), 4)
         with pytest.raises(ZeroDivisionError):
             self.calc.divide(36, 0)
