@@ -2,19 +2,15 @@ class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
-        self._is_checked_out = True
+        self._is_checked_out = False
 
     def check_out_book(self, book):
-        if book in self._books:
+        if not self._is_checked_out:
             self._is_checked_out = True
-        else:
-            self._is_checked_out = False
 
-    def return_book(self, book):
-        if book in self._books:
+    def return_book(self):
+        if self._is_checked_out:
             self._is_checked_out = False
-        else:
-            self._is_checked_out = True
 
 
 class Library:
