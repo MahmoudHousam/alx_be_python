@@ -4,7 +4,7 @@ class Book:
         self.author = author
         self._is_checked_out = False
 
-    def check_out_book(self, book):
+    def check_out_book(self):
         if not self._is_checked_out:
             self._is_checked_out = True
 
