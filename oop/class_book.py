@@ -10,6 +10,9 @@ class Book:
     def __repr__(self) -> str:
         return f"Book('{self.title}', '{self.author}', {self.year})"
 
+    def __del__(self):
+        print("Deleting {}".format(self.title))
+
 
 def main():
     # Creating an instance of Book
@@ -22,7 +25,7 @@ def main():
     print(repr(my_book))  # Expected to use __repr__
 
     # Deleting a book instance to trigger __del__
-    # del my_book
+    del my_book
 
 
 if __name__ == "__main__":
