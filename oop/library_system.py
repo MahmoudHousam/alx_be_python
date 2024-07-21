@@ -49,6 +49,9 @@ class Library:
             else:
                 print(f"Book: {book.title} by {book.author}")
 
+    def print_books(self):
+        print(f"{self.books}")
+
 
 def main():
     # Create a Library instance
@@ -66,6 +69,7 @@ def main():
 
     # List all books in the library
     my_library.list_books()
+    my_library.print_books()
 
 
 if __name__ == "__main__":
