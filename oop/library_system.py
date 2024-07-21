@@ -6,9 +6,6 @@ class Book:
     def __str__(self) -> str:
         return "Book: {} by {}".format(self.title, self.author)
 
-    def book_details(self):
-        return [f"{self.title}", f"{self.author}"]
-
 
 class EBook(Book):
     def __init__(self, title, author, file_size) -> None:
@@ -20,9 +17,6 @@ class EBook(Book):
             self.title, self.author, self.file_size
         )
 
-    def book_details(self):
-        return [f"{self.title}", f"{self.author}", f"{self.file_size}"]
-
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count) -> None:
@@ -33,9 +27,6 @@ class PrintBook(Book):
         return "PrintBook: {} by {}, Page Count: {}".format(
             self.title, self.author, self.page_count
         )
-
-    def book_details(self):
-        return [f"{self.title}", f"{self.author}", f"{self.page_count}"]
 
 
 class Library:
