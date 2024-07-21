@@ -40,21 +40,23 @@ class PrintBook(Book):
 
 class Library:
     def __init__(self) -> None:
-        # self.book = book
-        self.book = Book.book_details()
-        self.ebook = EBook.book_details()
-        self.printbook = PrintBook.book_details()
         self.books = []
-        self.books_ls = []
 
-    def add_book(self):
-        self.books.append(self.book[0])
+    def add_book(self, book):
+        self.books.append(book)
 
     def list_books(self):
-        self.books_ls.append(self.book, self.ebook, self.printbook)
-
-    def __str__(self):
-        return "{}\n{}\n{}".format(self.book, self.ebook, self.printbook)
+        for book in self.books:
+            if isinstance(book, EBook):
+                print(
+                    f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB"
+                )
+            elif isinstance(book, PrintBook):
+                print(
+                    f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}"
+                )
+            else:
+                print(f"Book: {book.title} by {book.author}")
 
 
 def main():
